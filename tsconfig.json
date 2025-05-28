@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "react-native-cn-quill": ["./src/index"]
+      "react-native-quill-ic": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

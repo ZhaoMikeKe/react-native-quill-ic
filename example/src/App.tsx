@@ -10,11 +10,11 @@ import {
   Text,
 } from 'react-native';
 import { CustomContainer } from './CustomContainer';
-import QuillEditor, { QuillToolbar } from 'react-native-cn-quill';
+import QuillEditor, { QuillToolbar } from 'react-native-quill-ic';
 import type {
   SelectionChangeData,
   TextChangeData,
-} from 'react-native-cn-quill';
+} from 'react-native-quill-ic';
 import { customFonts } from './customFonts';
 const clockIcon = require('../assets/icons/clock.png');
 
@@ -25,7 +25,7 @@ export default class App extends React.Component<any, any> {
     this._editor = React.createRef();
     this.state = {
       disabled: false,
-      title: 'react-native-cn-quill',
+      title: 'react-native-quill-ic',
     };
   }
 
@@ -149,9 +149,9 @@ export default class App extends React.Component<any, any> {
               // Otherwise ignore
             }
           }
-          
+
           Quill.register(PlainListItem, true);
-            
+
           `}
           defaultFontFamily={customFonts[0].name}
           customFonts={customFonts}

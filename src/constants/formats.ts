@@ -97,10 +97,10 @@ export const formats: Array<format> = [
   {
     name: 'size',
     defaults: [
-      { name: 'small', value: 'small', type: formatValueType.text },
-      { name: 'Normal', value: false, type: formatValueType.text },
-      { name: 'large', value: 'large', type: formatValueType.text },
-      { name: 'huge', value: 'huge', type: formatValueType.text },
+      { name: '最小', value: 'small', type: formatValueType.text },
+      { name: '正常', value: false, type: formatValueType.text },
+      { name: '超大', value: 'large', type: formatValueType.text },
+      { name: '最大', value: 'huge', type: formatValueType.text },
     ],
     type: formatType.select,
   },

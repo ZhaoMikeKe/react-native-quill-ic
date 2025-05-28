@@ -1,6 +1,6 @@
 {
-  "name": "react-native-cn-quill-example",
-  "description": "Example app for react-native-cn-quill",
+  "name": "react-native-quill-ic-example",
+  "description": "Example app for react-native-quill-ic",
   "version": "0.0.1",
   "private": true,
   "main": "index",

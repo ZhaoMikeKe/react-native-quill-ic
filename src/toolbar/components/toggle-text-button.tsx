@@ -10,11 +10,15 @@ interface Props {
   name: string;
 }
 
-export const ToggleTextButton: React.FC<Props> = (props) => {
+export const ToggleTextButton: React.FC<Props> = ({
+  name,
+  valueOn,
+  valueOff = false,
+  valueName,
+}) => {
   const { apply, isSelected, theme, styles } = useToolbar();
-  const { name, valueOff, valueOn, valueName } = props;
   const selected = isSelected(name, valueOn);
-  const handlePresss = () => apply(name, selected ? valueOff : valueOn);
+  const handlePress = () => apply(name, selected ? valueOff : valueOn);
   const defaultStyles = makeStyles(theme);
   const toolStyle = styles?.selection?.iconToggle?.tool
     ? styles.selection.iconToggle.tool(defaultStyles.tool)
@@ -25,8 +29,9 @@ export const ToggleTextButton: React.FC<Props> = (props) => {
   const textStyle = styles?.selection?.iconToggle?.image
     ? styles.selection.iconToggle.image(defaultStyles.text)
     : defaultStyles.text;
+
   return (
-    <TouchableWithoutFeedback onPress={handlePresss}>
+    <TouchableWithoutFeedback onPress={handlePress}>
       <View style={toolStyle}>
         <Text style={textStyle}>{valueName}</Text>
         {selected && <View style={overlayStyle} />}
@@ -56,7 +61,3 @@ const makeStyles = (theme: ToolbarTheme) =>
       fontWeight: 'bold',
     },
   });
-
-ToggleTextButton.defaultProps = {
-  valueOff: false,
-};

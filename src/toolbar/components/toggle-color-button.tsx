@@ -9,11 +9,14 @@ interface Props {
   name: string;
 }
 
-export const ToggleColorButton: React.FC<Props> = (props) => {
+export const ToggleColorButton: React.FC<Props> = ({
+  name,
+  valueOn,
+  valueOff = false,
+}) => {
   const { apply, isSelected, theme, styles } = useToolbar();
-  const { name, valueOff, valueOn } = props;
   const selected = isSelected(name, valueOn);
-  const handlePresss = () => apply(name, selected ? valueOff : valueOn);
+  const handlePress = () => apply(name, selected ? valueOff : valueOn);
   const defaultStyles = makeStyles(theme);
   const toolStyle = styles?.selection?.colorToggle?.tool
     ? styles.selection.colorToggle.tool(defaultStyles.tool)
@@ -24,8 +27,9 @@ export const ToggleColorButton: React.FC<Props> = (props) => {
   const noColorStyle = styles?.selection?.colorToggle?.noColor
     ? styles.selection.colorToggle.noColor(defaultStyles.noColor)
     : defaultStyles.noColor;
+
   return (
-    <TouchableWithoutFeedback onPress={handlePresss}>
+    <TouchableWithoutFeedback onPress={handlePress}>
       <View
         style={[
           toolStyle,
@@ -66,7 +70,3 @@ const makeStyles = (theme: ToolbarTheme) =>
       transform: [{ rotate: '45deg' }],
     },
   });
-
-ToggleColorButton.defaultProps = {
-  valueOff: false,
-};

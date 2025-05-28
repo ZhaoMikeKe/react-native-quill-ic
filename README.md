@@ -1,8 +1,8 @@
 ## Important announcement
-"The react-native-cn-quill" is now an open project and I'm no longer **actively maintaining** it. If you're interested in contributing or taking over its maintenance, please feel free to reach out to me!" This message clearly communicates the change in maintenance status and invites interested contributors to get in touch.
+"The react-native-quill-ic" is now an open project and I'm no longer **actively maintaining** it. If you're interested in contributing or taking over its maintenance, please feel free to reach out to me!" This message clearly communicates the change in maintenance status and invites interested contributors to get in touch.
 
-# react-native-cn-quill
-react-native-cn-quill is a rich-text editor for react-native. We've created this library on top of Quill Api.
+# react-native-quill-ic
+react-native-quill-ic is a rich-text editor for react-native. We've created this library on top of Quill Api.
 
 <img src="./images/quill-editor.jpeg" width="50%">
 
@@ -19,13 +19,13 @@ This package is using `react-native-webview`. Please follow [this document](http
 #### Install using npm:
 
 ```sh
-npm i react-native-cn-quill
+npm i react-native-quill-ic
 ```
 
 #### Install using yarn:
 
 ```
-yarn add react-native-cn-quill
+yarn add react-native-quill-ic
 ```
 
 ## Usage
@@ -35,7 +35,7 @@ Here is a simple overview of our components usage.
 ```js
 import React from 'react';
 import { SafeAreaView, StyleSheet, StatusBar } from 'react-native';
-import QuillEditor, { QuillToolbar } from 'react-native-cn-quill';
+import QuillEditor, { QuillToolbar } from 'react-native-quill-ic';
 export default function App() {
   const _editor = React.createRef();
 
@@ -685,7 +685,7 @@ Read about these methods and their functionality on [Quill Api](https://quilljs.
 
 The QuillToolbar component allow users to easily format Quill’s contents. QuillToolbar controls can be specified by a simple array of format names like `['bold', 'italic', 'underline', 'strike']` or by just passing 'basic' or 'full' string to options prop. we've tried to develop it just like [Quill Toolbar options](https://quilljs.com/docs/modules/toolbar/#container).
 
-If you prefer to use quill's built-in toolbar follow [this](https://github.com/imnapo/react-native-cn-quill#quillmodules) instruction.
+If you prefer to use quill's built-in toolbar follow [this](https://github.com/imnapo/react-native-quill-ic#quillmodules) instruction.
 
 The QuillToolbar uses a series of icons to render controls. this controls by default applies and removes formatting, but you can easily extend or overwrite these with `custom` prop.
 For example we may add the `image` and `clock` (user defined control that inserts current date to the editor) handlers just like this:
@@ -732,7 +732,7 @@ For example we may add the `image` and `clock` (user defined control that insert
 
 ```
 
-To see an example of how to fully implement this please check this [Link](https://github.com/imnapo/react-native-cn-quill/blob/master/example/src/App.tsx).
+To see an example of how to fully implement this please check this [Link](https://github.com/imnapo/react-native-quill-ic/blob/master/example/src/App.tsx).
 
 ## QuillToolbar Props
 
